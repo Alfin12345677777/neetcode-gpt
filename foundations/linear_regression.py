@@ -17,8 +17,9 @@ class Solution:
         # Round to 5 decimal places
 
         
-        
-        loss = np.mean((ground_truth-model_prediction)**2)
+        difference = model_prediction - ground_truth 
+        squared_error = difference ** 2
+        loss = np.mean(squared_error)
 
         return round(loss,5)
 
